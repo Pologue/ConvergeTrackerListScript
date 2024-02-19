@@ -25,10 +25,10 @@ success = 0.0
 for command in commands:
     respond = os.system(command)
     if (respond == 0):
-        print('Success\n')
+        print('Success')
         success += 1
     else:
-        print('Fatal\n')
+        print('Fatal: "{command}" failed')
 print(f'{success / total * 100}% commands successed')
 
 # copy from tracker.txt
@@ -41,7 +41,8 @@ clip.copy(tracker)
 # ! not recommended
 # * run below when qBittorrent's window is closed
 # gui.mouseInfo()
-""" gui.moveTo(1599, 1599)
+"""
+gui.moveTo(1599, 1599)
 time.sleep(1)
 gui.click(2043, 1567)
 time.sleep(1)
@@ -61,4 +62,5 @@ gui.hotkey('ctrl', 'a')
 time.sleep(1)
 gui.hotkey('ctrl', 'v')
 time.sleep(1)
-gui.click(1603, 1192) """
+gui.click(1603, 1192)
+"""
